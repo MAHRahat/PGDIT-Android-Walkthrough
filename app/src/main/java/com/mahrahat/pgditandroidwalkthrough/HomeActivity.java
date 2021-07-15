@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,6 +27,21 @@ public class HomeActivity extends AppCompatActivity {
 //        TextView tvHome = findViewById(R.id.tvHomeHead);
 //        tvHome.setText(s);
 
+        String[] stringOfEmails = new String[]{
+                "akash@du.ac.bd",
+                "batash@du.ac.bd",
+                "chameli@du.ac.bd",
+                "dola@du.ac.bd",
+                "einstein@du.ac.bd",
+                "feynman@du.ac.bd",
+                "hazi@du.ac.bd",
+                "gazi@du.ac.bd",
+                "fountaein@yandex.com"
+        };
+        AutoCompleteTextView actv = findViewById(R.id.actvEmail);
+        ArrayAdapter<String> aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, stringOfEmails);
+        actv.setAdapter(aa);
+
         SQLiteDatabase itdb = openOrCreateDatabase("walkthrough.db", MODE_PRIVATE, null);
         String tableName = "Student";
         String createOp = "CREATE TABLE IF NOT EXISTS " +
@@ -36,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
                 "pass text" +
                 ")";
         itdb.execSQL(createOp);
+
         Button createOpButton = findViewById(R.id.btnInsert);
         createOpButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -44,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
                 String myRoll = etRoll.getText().toString();
                 cv.put("roll", myRoll);
                 cv.put("name", ((EditText) findViewById(R.id.etName)).getText().toString());
-                cv.put("email", ((EditText) findViewById(R.id.etEmail)).getText().toString());
+                cv.put("email", ((AutoCompleteTextView) findViewById(R.id.actvEmail)).getText().toString());
                 cv.put("pass", ((EditText) findViewById(R.id.etPass)).getText().toString());
                 itdb.insert(tableName, null, cv);
             }
