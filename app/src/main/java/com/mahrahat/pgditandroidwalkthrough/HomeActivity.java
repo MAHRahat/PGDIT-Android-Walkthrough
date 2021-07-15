@@ -1,6 +1,7 @@
 package com.mahrahat.pgditandroidwalkthrough;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +47,32 @@ public class HomeActivity extends AppCompatActivity {
                 cv.put("email", ((EditText) findViewById(R.id.etEmail)).getText().toString());
                 cv.put("pass", ((EditText) findViewById(R.id.etPass)).getText().toString());
                 itdb.insert(tableName, null, cv);
+            }
+        });
+
+        Button readOpButton = findViewById(R.id.btnQuery);
+        readOpButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                String[] columns = new String[]{"name", "email"};
+                String whereClause = "roll = ?";
+                String[] whereArgs = new String[]{((EditText) findViewById(R.id.etRoll)).getText().toString()};
+                String groupBy = null;
+                String having = null;
+                String orderBy = null;
+                String limit = null;
+                Cursor cursor = itdb.query(tableName,
+                        columns,
+                        whereClause,
+                        whereArgs,
+                        groupBy,
+                        having,
+                        orderBy,
+                        limit);
+                while (cursor.moveToNext()) {
+                    String readName = cursor.getString(cursor.getColumnIndex("name"));
+                    String readEmail = cursor.getString(cursor.getColumnIndex("email"));
+                    showToast("Name: " + readName + ", Email: " + readEmail);
+                }
             }
         });
     }
