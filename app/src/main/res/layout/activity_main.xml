@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/white"
         android:padding="40dp"
         android:text="Welcome"
