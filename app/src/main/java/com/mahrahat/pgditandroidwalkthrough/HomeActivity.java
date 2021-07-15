@@ -12,9 +12,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Bundle bundle = getIntent().getExtras();
-        String s = bundle.getString("passed");
-        TextView tvHome = findViewById(R.id.tvHomeHead);
-        tvHome.setText(s);
+//        Bundle bundle = getIntent().getExtras();
+//        String s = bundle.getString("passed");
+//        TextView tvHome = findViewById(R.id.tvHomeHead);
+//        tvHome.setText(s);
     }
 }
