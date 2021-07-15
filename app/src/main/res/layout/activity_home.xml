@@ -43,6 +43,7 @@
         android:id="@+id/actvEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:completionThreshold="1"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="10dp"
