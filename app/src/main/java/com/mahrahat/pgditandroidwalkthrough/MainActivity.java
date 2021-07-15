@@ -1,5 +1,6 @@
 package com.mahrahat.pgditandroidwalkthrough;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnEnter = findViewById(R.id.btnEnter);
-        btnEnter.setOnClickListener(new View.OnClickListener(){
+        btnEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
