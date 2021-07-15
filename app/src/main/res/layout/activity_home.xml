@@ -26,7 +26,7 @@
         android:hint="Name"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="2dp"
+        android:paddingVertical="5dp"
         android:textSize="18sp" />
 
     <EditText
@@ -36,7 +36,7 @@
         android:hint="Roll"
         android:inputType="number"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="2dp"
+        android:paddingVertical="5dp"
         android:textSize="18sp" />
 
     <EditText
@@ -46,7 +46,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="2dp"
+        android:paddingVertical="5dp"
         android:textSize="18sp" />
 
     <RelativeLayout
@@ -59,20 +59,22 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="2dp"
+            android:paddingVertical="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="100dp"
             android:textSize="18sp" />
 
         <ToggleButton
             android:id="@+id/tbPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/etPass"
+            android:layout_alignBaseline="@id/etPass"
+            android:layout_alignParentRight="true"
             android:paddingHorizontal="10dp"
-            android:paddingVertical="2dp"
-            android:text="tb"
+            android:paddingVertical="5dp"
             android:textOff="Show"
-            android:textOn="Hide" />
+            android:textOn="Hide"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
