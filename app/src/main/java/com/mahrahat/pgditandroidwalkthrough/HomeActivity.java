@@ -89,6 +89,15 @@ public class HomeActivity extends AppCompatActivity {
                         whereArgs);
             }
         });
+
+        Button deleteOpButton = findViewById(R.id.btnDelete);
+        deleteOpButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                String whereClause = "roll = ?";
+                String[] whereArgs = new String[]{((EditText) findViewById(R.id.etRoll)).getText().toString()};
+                itdb.delete(tableName, whereClause, whereArgs);
+            }
+        });
     }
 
     public void showToast(String str) {
