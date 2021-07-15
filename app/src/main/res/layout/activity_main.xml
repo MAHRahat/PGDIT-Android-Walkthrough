@@ -2,14 +2,16 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_height="200dp"
+    android:layout_gravity="top"
+    android:background="@color/teal_700"
     android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:padding="40dp"
         android:text="Welcome"
         android:textAlignment="center"
