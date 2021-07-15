@@ -75,6 +75,20 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Button updateOpButton = findViewById(R.id.btnUpdate);
+        updateOpButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                ContentValues contentValues = new ContentValues();
+                contentValues.put("name", ((EditText) findViewById(R.id.etName)).getText().toString());
+                String whereClause = "roll = ?";
+                String[] whereArgs = new String[]{((EditText) findViewById(R.id.etRoll)).getText().toString()};
+                itdb.update(tableName,
+                        contentValues,
+                        whereClause,
+                        whereArgs);
+            }
+        });
     }
 
     public void showToast(String str) {
