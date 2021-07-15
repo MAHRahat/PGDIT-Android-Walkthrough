@@ -5,19 +5,19 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="2dp"
     tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/tvHomeHead"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:padding="10dp"
+        android:layout_margin="2dp"
+        android:padding="2dp"
         android:text="Home"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/etName"
@@ -25,8 +25,9 @@
         android:layout_height="wrap_content"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/etRoll"
@@ -34,8 +35,9 @@
         android:layout_height="wrap_content"
         android:hint="Roll"
         android:inputType="number"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -43,8 +45,9 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:textSize="18sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -56,15 +59,18 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="10dp"
-            android:textSize="20sp" />
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:textSize="18sp" />
 
         <ToggleButton
             android:id="@+id/tbPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/etPass"
-            android:padding="0dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            android:text="tb"
             android:textOff="Show"
             android:textOn="Hide" />
 
@@ -107,28 +113,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="Insert" />
+            android:text="Ins" />
 
         <Button
             android:id="@+id/btnQuery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="Query" />
+            android:text="Que" />
 
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="Update" />
+            android:text="Updt" />
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="Delete" />
+            android:text="Del" />
 
     </LinearLayout>
 
