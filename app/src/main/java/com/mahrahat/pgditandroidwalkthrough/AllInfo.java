@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AllInfo extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class AllInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_info);
 
-        List<Student> studentList = null;
+        List<Student> studentList = new ArrayList<Student>();
         lvStList = findViewById(R.id.lvAllInfo);
         lvStList.setAdapter(new StudentAdapter(studentList, this.getApplicationContext()));
 
