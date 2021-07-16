@@ -1,6 +1,7 @@
 package com.mahrahat.pgditandroidwalkthrough;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -114,6 +115,13 @@ public class HomeActivity extends AppCompatActivity {
                 String whereClause = "roll = ?";
                 String[] whereArgs = new String[]{((EditText) findViewById(R.id.etRoll)).getText().toString()};
                 itdb.delete(tableName, whereClause, whereArgs);
+            }
+        });
+
+        Button btnShowAllInfo = findViewById(R.id.btnShowAll);
+        btnShowAllInfo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, AllInfo.class));
             }
         });
     }
