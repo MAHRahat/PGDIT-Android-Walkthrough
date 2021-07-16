@@ -25,11 +25,13 @@ public class StudentAdapter extends ArrayAdapter<Student> {
         if (convertView == null) {
             LayoutInflater layoutInflater = LayoutInflater.from(getContext());
             convertView = layoutInflater.inflate(R.layout.list_student, parent, false);
+            viewHolder.roll = convertView.findViewById(R.id.tvStRoll);
+            viewHolder.name = convertView.findViewById(R.id.tvStName);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewHolder.roll.setText(student.getRoll());
+        viewHolder.roll.setText(new String(String.valueOf(student.getRoll())));
         viewHolder.name.setText(student.getName());
         return convertView;
     }
